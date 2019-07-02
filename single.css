@@ -1,0 +1,106 @@
+			.clear{
+				clear:both;
+			}
+			body{
+				font-family: sans-serif;
+				margin:0;
+				padding:0;
+				background-color: white;
+				margin-left:50px;
+				margin-right:50px;
+				
+			}
+			.index{
+				margin:20px;
+				border-bottom:dashed 1px #D3D3D3;
+			}
+			.movie-name{
+				font-family: Serif;
+				font-style:normal;
+				font-size:26px;
+				margin-left:60px;
+				font-weight: lighter;
+				color:#009933;
+			}
+			.info{
+				margin-left:50px;
+				height:400px;
+				
+			}
+			.info-img{
+				float:left;
+				width:270px;
+				height:400px;
+				border-radius: 8px;
+			}
+			.info-list{
+				float:left;
+				margin-left: 50px;
+				padding-left:10px;
+				height:380px;
+				border-left: solid 1px #D2691E;
+			}
+			.info-list p{
+				font-size:20px;
+			}
+			.intro{
+				margin-left:50px;
+				border-top:dashed 1px #D3D3D3;
+			}
+			.title{
+				color:#009933;
+				font-size:20px;
+			}
+			.detail{
+				
+			}
+			.view{
+				margin-left:50px;
+				/* maring:auto;这次这个没效果。。。 */
+				text-align: center;
+			}
+			.play{
+				border-top:dashed 1px #D3D3D3;
+				margin-left: 50px;
+				font-size: 20px;
+				color:#009933;
+			}
+			.view iframe{
+				margin-left:auto;
+				margin-right:auto;
+			}
+			.comment{
+				border-top:dashed 1px #D3D3D3;
+				margin-left:50px;
+				background-color: white;
+			}
+			.comment-title{
+				font-size: 20px;
+				color:#009933;
+			}
+			.comment textarea{
+				width:85%;
+				height:70px;
+			}
+			.conmentUnit{
+				margin-left:50px;
+				border-top:dashed 1px black;
+			}				
+			.userTop{
+			}
+			.userImg{
+				float:left;				
+			}
+			.userImg img{
+				width: 30px;
+				height:30px;
+			}
+			.userName{
+				float:left;
+				font-size: 18px;
+				color:royalblue;
+				padding:0;
+				margin:0;
+				height:20px;
+				/* 为什么这个div无论高度怎么设置都没有变化？ */
+			}

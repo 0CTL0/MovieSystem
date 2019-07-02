@@ -1,0 +1,227 @@
+/*
+问题：
+1、PHP函数，字符编码不熟悉
+2、不熟悉DIV的标准布局和命名方式(发现：大DIV名-小DIV名-原标签，这样的命名格式很清楚)
+	找一些好的网站，来看它的DIV命名方式和设计格式、CSS名字。
+3、对CSS的继承规则不了解，有些属性可继承，有些不可继承，冲突时选择继承等
+4、不理解浮动
+5、不理解定位
+6、不理解块内显示哪些属性失效
+7、不明白伪类伪元素，伪类好像是将选择器分为几类赋予不同样式，一个冒号+伪类；
+伪元素则是操作选择器的不同部分来赋予样式，两个冒号+伪元素。
+8、完全不懂弹性盒子和响应式布局
+9、JQuery bookstrate很好用，但对原生语法的理解太浅，两个都要加强学习
+10、怎么设置id，原生JS只能用id获取元素？？？
+11、JS的post、get方法不会用，
+12、AJAX请求数据不会
+13、很多时候，没有报错提示，无论是JS还是PHP，没有达到效果时，一定有地方错了，
+   不要光想，不断测试，重复写，才能快速找到BUG
+14、加强学习JS的内置对象和库函数,特别是字符串处理函数
+15、难点：页面的携参跳转、JS（location对象）和PHP（$_SERVER全局变量）处理url参数传递的函数、在js中通过AJAX传递参数的函数
+16、被编码问题搞得头大，编辑器的编码、浏览器的编码、传递中文参数时的编码解码等等
+17、CSS中块元素 绝对宽度和百分比宽度 居中显示不明白具体原理
+18、CSS：对于a标签设置样式转换的部分，或跳转时样式的变换不熟悉，常弄不出效果
+19、怎样的项目结构才清晰明确，个人感觉还是微信小程序的项目结构很多，每个页面一个文件夹+共同文件夹。
+
+*/
+
+			body{
+				padding: 0;
+				margin: 0;
+				background-color:white;
+				/*background-image: url("bg.jpg");*/
+				font-family: sans-serif;
+			}
+			.clear{
+				clear:both;
+			}
+			#nav{
+				background-color: white;  /*只有设置边框背景颜色才生效*/
+				
+				margin: 50px;
+				margin-bottom: 0px;
+				margin-top:0;
+			}
+			.nav-img{
+				float: left;
+				margin-left: 30px;
+				margin-top:20px;
+				height: 40px;
+			}
+			.search{
+				float:left;
+				margin-left: 500px;
+				margin-top: 40px;
+			}
+			.search .input1{
+				width: 300px;
+				height: 35px;
+			}
+			.search .input2{
+				width: 50px;
+				height: 35px;
+			}
+			.info{
+				float:right;
+				}
+			.vip{
+				float:left;
+				margin-top:30px;
+				margin-right: 30px;
+			}
+			.vip a,.login a{
+				color:black;
+			}
+			.vip img{
+				width:20px;
+				height:20px;
+				margin-left:15px;
+			}
+			.login{
+				float:right;
+				margin-top:30px;
+				margin-right: 30px;
+			}
+			.login img{
+				width:20px;
+				height:20px;
+				margin-left:15px;
+			}			
+			.nav-second{
+				background-color:#505050;
+				height:50px;
+				padding:0;
+			}
+			.nav-list{
+				height:100%;
+			}
+			.nav-list ul{
+				list-style-type: none;
+							
+			}
+			/* margin:auto; text-align:center;都不能使列表项居中 */
+			/* 怎么设置列表项跟父DIV一样高？ */
+			.nav-list li{
+				float: left;
+				margin-right:50px;
+				margin-top:18px;
+				
+			}
+			.nav-list li a{
+				color: white;
+				text-decoration: none;
+			}
+			.nav-list li a:hover {background-color:black;text-decoration:underline;}
+			
+
+			#container{
+				margin: 50px;
+				
+				margin-top:0;
+				background-color: white;
+				margin-bottom: 0;
+			}
+			#myCarousel{
+				margin: auto;
+				/*align: center;这个居中不起效果*/	
+				width:50%;
+				height:500px;			
+				/* 高度无法设置百分比,没有原始宽度 */
+			}
+			
+			#myCarousel  .carousel-inner > .item > img {
+			display: block;
+			width:100%;
+			height:500px;
+			/* 百度：当图片的大小出现在原生的bootstrap类属性限定中，图片会按照自己的大小进行布局，这样就会出现图片小于父div的情况 */
+			/* 对CSS很多基础知识都不够理解...... */
+			}
+
+
+			#videoType{
+				
+				background-color: white;
+			}
+			.list-top-left{
+				float:left;
+				margin-top:0;
+			}
+			.list-ico{
+				width:40px;
+				height:40px;
+				float: left;
+				margin-top:10px;
+			}
+			.movieTitle{
+				/* display:inlinek;
+				padding-top:2px;
+				行内元素无法设置padding margin...... */
+				float: left;
+			}
+			.list-top-right{
+				float:right;
+				margin-right:30px;
+				margin-top:20px;
+			}
+			.list-top-right a{
+				font-size: 18px;
+				font-family: sans-serif;
+				color:#87CEEB;
+			}
+			.movieUnit{
+				float: left;
+				margin-left: 40px;
+				padding: 5px;
+				border: solid 1px black;
+				border-radius: 6px;
+			}
+			.movieImg{
+				
+				width:270px;
+				height:385px;
+			}
+			.movieName{
+				text-align: center;
+				margin-top:10px;
+				font-size: 16px;
+			}
+
+
+		#footer{
+			
+			margin:50px;
+			margin-top:0;
+		}
+		#footer img{
+			height: 50px;
+			width: 80px;
+			margin: 20px;
+		}
+		/* #footer nav a{
+			color: white;
+			margin-right: 100px;
+			margin-left: 50px;
+		}
+		没用的CSS代码要注释掉,引起后面语法错误 */
+		.about{
+			list-style-type: none;
+		}
+		.about li{
+			float:left;
+			margin-right:100px;
+		}
+		 .about li a{
+			display:block;
+			text-decoration: none;
+
+		}
+		
+		.drow{
+			 /* display:none; */
+			 list-style-type: none;
+			 position: absolute;
+			 z-index:-1;
+			 /* 如何是隐藏的列表项层叠在页面上？ */
+		}
+		
+		
